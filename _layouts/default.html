@@ -1,20 +1,92 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<!doctype html>
+<html>
+  <head>
+    <!-- Page setup -->
+    <meta charset="utf-8">
+    <title>Leadmonk Sample Page</title>
+    <meta name="description" content="A brief description of your site for search engines">
+    <meta name="author" content="Information about the author here">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="favicon.png">
+  
+    <!-- Stylesheets -->
+    <!-- Reset default styles and add support for google fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+   
+    <!-- Custom styles -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
 
-  {%- include head.html -%}
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
 
+    <!-- Want to add Bootstrap? -->
+    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+    
+  </head>
+  
   <body>
 
-    {%- include header.html -%}
+    <header id="header">
+      <img src="logofull.png">
+      <h1>Leadmonk Embed Examples</h1>
+      
+      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+      <ul class="main-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Embed-Example</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>                 
+    </header>
+   
+     
+<!-- Leadmonk badge widget begin -->
+<link href="https://firebasestorage.googleapis.com/v0/b/leadmonk-prod.appspot.com/o/leadmonk%2Fembed%2Fleadmonk_widget.css?alt=media" rel="stylesheet">
+<script src="https://firebasestorage.googleapis.com/v0/b/leadmonk-prod.appspot.com/o/leadmonk%2Fembed%2Fleadmonk_widget.js?alt=media" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Leadmonk.initBadgeWidget({ url: 'https://web.leadmonk.io/kunapaneni1454/short_meeting', text: 'Schedule time with me', color: '#245BAE', textColor: '#ffffff', branding: false }); }</script>
+<!-- Leadmonk badge widget end -->
 
-    <div class="py-5">
-      <div class="container page-content">
-          {{ content }}
+    <div id="container">
+      <div class="inner">
+        <div id="content"> 
+          
+          <div id="home" class="content-region hide">
+            <h2>Home</h2>
+            <p>
+              This is a simple website to showcase leadmonk embeds. "Floating Button" to get the popup widget can found at the bottom right corner.
+              
+              For Embed example, go to "Embed-Example" menu option.
+            </p>
+          </div>
+          
+          <div id="about" class="content-region hide">
+            <h2>Embed Example</h2>
+            <p>
+<!-- Leadmonk inline widget begin -->
+<div class="leadmonk-inline-widget" data-url="https://domain2.neocal.io/x17prashanth_496/30min?hideLogo=true&pagebackground=0xffffff" style="min-width:350px;height:600px;"></div>
+<script type="text/javascript" src="https://firebasestorage.googleapis.com/v0/b/leadmonk-prod.appspot.com/o/leadmonk%2Fembed%2Fleadmonk_widget.js?alt=media" async></script>
+<!-- Leadmonk inline widget end -->
+
+            </p>
+          </div>
+          
+          <div id="contact" class="content-region hide">
+            <h2>Contact</h2>
+            <p>
+              Please mail to support@leadmonk.io to reach out to us
+            </p>
+          </div>
+          
+        </div>
       </div>
     </div>
 
-    {%- include footer.html -%}
-
+    <footer>  
+      
+    </footer>
+    
+    <!-- Load additional JS scripts here -->
+    <script type="text/javascript" src="script.js"></script>
+    
   </body>
-
 </html>
